@@ -1,4 +1,5 @@
 ﻿using Proyecto.DBContext;
+using Proyecto.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,26 @@ namespace Proyecto.Controllers
             var clasificacion = context.Clasificacion.ToList();
             return View(clasificacion);
         }
+
+        public ActionResult Crear()
+        {
+            var clasificacion = new Clasificacion();
+            return View(clasificacion);
+        }
+
+        [HttpPost]
+        public ActionResult Crear(Clasificacion clasificacion)
+        {
+            if (!ModelState.IsValid)
+            {
+                var clasifi = clasificacion;
+                return View(clasifi);
+            }
+            context.Clasificacion.Add(clasificacion);
+            context.SaveChanges();
+            return RedirectToAction("Index", "Clasificacion");
+        }
+
 
     }
 }
