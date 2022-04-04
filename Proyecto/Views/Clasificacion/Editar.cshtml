@@ -1,15 +1,15 @@
 ﻿@model Proyecto.Models.Clasificacion
 @{
-    ViewBag.Title = "Crear";
+    ViewBag.Title = "Editar";
 }
 
-<h2>Nueva Clasificacion Cliente</h2>
-@using (Html.BeginForm("Crear", "Clasificacion"))
+<h2>Editar Cliente</h2>
+@using (Html.BeginForm("Editar", "Clasificacion"))
 {
     <div class="form-group">
         @Html.LabelFor(m => m.Codigo)
         @Html.TextBoxFor(m => m.Codigo, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.Codigo, null, new { @class = "text-danger" })
+        @Html.ValidationMessageFor(m => m.Codigo)
     </div>
     <div>
         @Html.LabelFor(m => m.Descripcion)
