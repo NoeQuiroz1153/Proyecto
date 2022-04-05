@@ -20,7 +20,7 @@ namespace Proyecto.Controllers
             base.Dispose(disposing);
             context.Dispose();
         }
-        // GET: CategoriaProducto
+        
         public ActionResult Index()
         {
             var clasificacion = context.Clasificacion.ToList();
