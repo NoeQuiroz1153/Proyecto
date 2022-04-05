@@ -22,6 +22,7 @@ namespace Proyecto.Controllers
         }
         public ActionResult Index()
         {
+            // muestra las clasificaciones
             
             var clasiproducto = context.ClasiProductos.ToList();
             return View(clasiproducto);

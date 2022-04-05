@@ -216,18 +216,18 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Clasificacion\Detalles.cshtml" />
-    <Content Include="Views\Clasificacion\Eliminar.cshtml" />
-    <Content Include="Views\Clasificacion\Index.cshtml" />
-    <Content Include="Views\Clasificacion\Nuevo.cshtml" />
     <Content Include="Views\Producto\Detalles.cshtml" />
     <Content Include="Views\Producto\Eliminar.cshtml" />
     <Content Include="Views\Producto\Index.cshtml" />
     <Content Include="Views\Producto\ProductoForm.cshtml" />
+    <Content Include="Views\ClasiProducto\Detalles.cshtml" />
+    <Content Include="Views\ClasiProducto\Eliminar.cshtml" />
+    <Content Include="Views\ClasiProducto\Index.cshtml" />
+    <Content Include="Views\ClasiProducto\Nuevo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\ClasiProducto\" />
+    <Folder Include="Views\Clasificacion\" />
     <Folder Include="Views\Cliente\" />
     <Folder Include="Views\DetallePedido\" />
     <Folder Include="Views\Pedido\" />

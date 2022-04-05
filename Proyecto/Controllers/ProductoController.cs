@@ -24,6 +24,7 @@ namespace Proyecto.Controllers
         }
         public ActionResult Index()
         {
+            //muestra los productos
             var productos = context.Productos.ToList();
             return View(productos);
         }
