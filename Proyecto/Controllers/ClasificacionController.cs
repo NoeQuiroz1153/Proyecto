@@ -84,6 +84,21 @@ namespace Proyecto.Controllers
             return RedirectToAction("Index", "Clasificacion");
         }
 
+        public ActionResult Detalle(int id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var clasificacion = context.Clasificacion.SingleOrDefault(cc => cc.ClasificacionID == id);
+            if (clasificacion == null)
+                return HttpNotFound();
+
+            return View(clasificacion);
+        }
+
+
 
 
 
