@@ -221,11 +221,11 @@
     <Content Include="Views\Clasificacion\Editar.cshtml" />
     <Content Include="Views\Clasificacion\Detalle.cshtml" />
     <Content Include="Views\Clasificacion\Eliminar.cshtml" />
+    <Content Include="Views\Cliente\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\ClasiProducto\" />
-    <Folder Include="Views\Cliente\" />
     <Folder Include="Views\DetallePedido\" />
     <Folder Include="Views\Pedido\" />
     <Folder Include="Views\Producto\" />
