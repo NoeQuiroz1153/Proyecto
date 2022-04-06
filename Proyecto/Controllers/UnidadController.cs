@@ -11,7 +11,7 @@ namespace Proyecto.Controllers
 {
     public class UnidadController : Controller
     {
-       
+       //
             private LaBodegaContext context;
 
             public UnidadController()
