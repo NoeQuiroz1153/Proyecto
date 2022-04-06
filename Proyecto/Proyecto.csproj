@@ -220,6 +220,7 @@
     <Content Include="Views\Clasificacion\Crear.cshtml" />
     <Content Include="Views\Clasificacion\Editar.cshtml" />
     <Content Include="Views\Clasificacion\Detalle.cshtml" />
+    <Content Include="Views\Clasificacion\Eliminar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -98,6 +98,35 @@ namespace Proyecto.Controllers
             return View(clasificacion);
         }
 
+        public ActionResult Eliminar(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var clasificacion = context.Clasificacion.SingleOrDefault(cc => cc.ClasificacionID == id);
+
+            if (clasificacion == null)
+                return HttpNotFound();
+
+            return View(clasificacion);
+        }
+
+        [HttpPost]
+        public ActionResult Eliminar(int id)
+        {
+
+            if (id == 0)
+                return HttpNotFound();
+
+            var clasificacionDb = context.Clasificacion.SingleOrDefault(cc => cc.ClasificacionID == id);
+            if (clasificacionDb == null)
+                return HttpNotFound();
+
+            context.Clasificacion.Remove(clasificacionDb);
+            context.SaveChanges();
+            return RedirectToAction("Index", "Clasificacion");
+        }
 
 
 
