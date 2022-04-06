@@ -1,17 +1,37 @@
-﻿using System;
+﻿using Proyecto.DBContext;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
+using System.Net;
+using Proyecto.Models;
+
+
 
 namespace Proyecto.Controllers
 {
     public class ClienteController : Controller
     {
-        // GET: Cliente
+        private LaBodegaContext context;
+
+        public ClienteController()
+        {
+            context = new LaBodegaContext();
+        }
+        protected override void Dispose(bool disposing)
+        {
+            base.Dispose(disposing);
+            context.Dispose();
+        }
+
         public ActionResult Index()
         {
-            return View();
+
+            var cliente = context.Clientes.Include(c => c.Clasificacion).ToList();
+            return View(cliente);
         }
+
     }
 }
