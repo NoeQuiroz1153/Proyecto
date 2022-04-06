@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Proyecto.Models.Unidad>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Unidad</h2>
+<p>
+    @Html.ActionLink("Nuevo", "Crear", null, new { @class = "btn btn-primary" })
+</p>
+@if (!Model.Any())
+{
+    <p></p>
+}
+else
+{
+    <table id="Unidad" class="table table-bordered table-hover">
+        <thead>
+
+            <tr>
+                <td> Codigo</td>
+                <td> Descripcion </td>
+                <td> Estado </td>
+                <td> Accciones </td>
+
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach (var unidad in Model)
+            {
+                <tr>
+                    <td>@unidad.Codigo</td>
+                    <td>@unidad.Descripcion</td>
+                    <td>@Html.DisplayFor(m => unidad.Estado)</td>
+                    <td>
+                        @Html.ActionLink("Editar", "Editar", new { id = unidad.UnidadMedidaID }, new { @class = "btn btn-primary" }) |
+                        @Html.ActionLink("Detalle", "Detalle", new { id = unidad.UnidadMedidaID }, new { @class = "btn btn-warning" }) |
+                        @Html.ActionLink("Eliminar", "Eliminar", new { id = unidad.UnidadMedidaID }, new { @class = "btn btn-danger" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+}
+@section Scripts
+{
+    <script>
+        $(document).ready(function()
+        {
+            $("#Clasificacion").DataTable();
+        })
+    </script>
+}
+

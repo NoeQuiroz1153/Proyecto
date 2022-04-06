@@ -1,0 +1,35 @@
+﻿@model Proyecto.Models.Unidad
+@{
+    ViewBag.Title = "Crear";
+}
+
+<h2>Nueva Unidad</h2>
+@using (Html.BeginForm("Crear", "Unidad"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Codigo)
+        @Html.TextBoxFor(m => m.Codigo, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Codigo, null, new { @class = "text-danger" })
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Descripcion)
+        @Html.TextBoxFor(m => m.Descripcion, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Descripcion)
+
+    </div>
+    <div>
+        <label>
+            @Html.CheckBoxFor(m => m.Estado, new { @class = "form-check.label" }) Estado
+            @Html.ValidationMessageFor(m => m.Estado)
+        </label>
+    </div>
+    @Html.HiddenFor(m => m.UnidadMedidaID)
+    <button type="submit" class="btn btn-primary">Guardar</button>
+}
+
+
+
+
+
+
+

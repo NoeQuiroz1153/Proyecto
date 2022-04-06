@@ -216,6 +216,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Unidad\Crear.cshtml" />
+    <Content Include="Views\Unidad\Detalle.cshtml" />
+    <Content Include="Views\Unidad\Index.cshtml" />
+    <Content Include="Views\Unidad\Eliminar.cshtml" />
+    <Content Include="Views\Unidad\Editar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -225,7 +230,6 @@
     <Folder Include="Views\DetallePedido\" />
     <Folder Include="Views\Pedido\" />
     <Folder Include="Views\Producto\" />
-    <Folder Include="Views\Unidad\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
